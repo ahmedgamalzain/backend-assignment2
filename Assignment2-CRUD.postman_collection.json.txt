@@ -1,0 +1,65 @@
+{
+  "info": {
+    "name": "Assignment 2 - CRUD APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": "http://localhost:3000/user",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"User 1\",\n    \"age\": 25,\n    \"email\": \"user@email.com\"\n}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": "http://localhost:3000/user/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"age\": 30\n}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://localhost:3000/user/1"
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/user"
+      },
+      "response": []
+    },
+    {
+      "name": "Get User by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/user/1"
+      },
+      "response": []
+    }
+  ]
+}
